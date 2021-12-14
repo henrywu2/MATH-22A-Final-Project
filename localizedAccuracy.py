@@ -37,7 +37,7 @@ plt.scatter(launches['temp'], launches['failures'], s = 20, color = 'k', label =
 plt.gca().axhline(y = 0, c = '0.5', zorder = 0)
 plt.plot([0, 100], [reg.intercept_[0], reg.coef_[0][0] * 100 + reg.intercept_[0]], color = 'b', label = 'OLS (' + r'y = 4.675 - 0.061x' + ')')
 plt.scatter(31, reg.coef_[0][0] * 31 + reg.intercept_[0], color = 'b', label = 'OLS prediction')
-plt.annotate('(31, 2.789)', (31, 2.789), (-100, -30), textcoords = 'offset pixels')
+plt.annotate('(31, 2.789)', (31, 2.789), (-5, -5), ha = 'right', va = 'top', textcoords = 'offset pixels')
 
 plt.plot([0, 100],  [wresults.params[0], wresults.params[1] * 100 + wresults.params[0]], color = 'g', label = 'OLS (' + r'y = 5.601 - 0.074x' + ')')
 plt.scatter(31, wresults.params[1] * 31 + wresults.params[0], color = 'g', label = 'WLS prediction')
